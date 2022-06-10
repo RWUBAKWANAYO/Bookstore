@@ -170,6 +170,7 @@ background-color: #e8e8e8;
 .addbook-container h2 {
   color: #888888;
   margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .addbook-container form {
@@ -208,4 +209,61 @@ background-color: #e8e8e8;
 }
 .addbook-container form input::placeholder{
   color: #888888;
+}
+
+/* mobile screen design*/
+
+@media(max-width:992px){
+  .addbook-container form {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+  }
+  .book-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+}
+@media(max-width:600px){
+  .navBar {
+    height: 65px;
+    align-items: flex-start;
+    padding: 20px 5%;
+    position: relative;
+  }
+  .navBar h1 {
+    width: auto;
+    font-size: 1.4rem;
+  }
+  .navBar img {
+    margin-top: -5px;
+    object-fit: contain;
+  }
+  .navBar ul {
+    position: absolute;
+    bottom: 20px;
+  }
+  .title {
+    font-size: 1.3rem;
+}
+  .book-buttons {
+    margin-top: 0.2rem;
+}
+  .addbook-container form {
+    grid-template-columns: 1fr;
+  }
+  .addbook-container h2 {
+    font-size: 1.2rem;
+  }
+  .progress-container {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+  }
+  .progress-container hr {
+    display: none;
+  }
+  .update-button {
+    margin-top: 0.5rem;
+  }
 }
