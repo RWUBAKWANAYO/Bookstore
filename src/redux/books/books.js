@@ -12,10 +12,13 @@ export const AddBookFunc = (NewBook) => async (dispatch) => {
   } catch (err) { return err; }
 };
 
-export const RemoveBookFunc = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
+export const RemoveBookFunc = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`${process.env.REACT_APP_BASE_URL}/${id}`);
+    return dispatch({ type: REMOVE_BOOK, id });
+  } catch (err) { return err; }
+};
+
 export const getBooksFunc = () => async (dispatch) => {
   try {
     const response = await axios.get(`${process.env.REACT_APP_BASE_URL}`);
