@@ -52,3 +52,101 @@ body{
   .navBar ul li a:hover,.navBar ul li a:focus{
     color:rgba(0, 0, 0, 0.5);
   }
+
+  /* Books*/
+.books-container{
+  width: 100%;
+  padding: 4rem 0;
+}
+.book-container{
+  width: calc(90% - 40px);
+margin: 0 5% 2rem 5%;
+padding: 20px;
+background-color: #fff;
+border: 1px #e8e8e8 solid;
+border-radius: 3px;
+display: grid;
+grid-template-columns: 4fr 5fr;
+}
+.book-wrapper{
+  display: grid;
+  row-gap: 5px;
+}
+.progress-container{
+  display: flex;
+  align-items: center;
+}
+.progress-container hr{
+width: 1px;
+height: 70%;
+margin: 0 10%;
+border: none;
+background-color: #e8e8e8;
+}
+.bar-wrapper{
+  display: flex;
+  align-items: center;
+}
+.bar-wrapper img{
+  width: 70px;
+  margin-right: 1.2rem;
+  height: fit-content;
+  object-fit: contain;
+}
+.bar-wrapper span h1{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.update-button{
+  outline: none;
+  border: none;
+  background-color: #0290ff;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.87rem;
+   font-weight: normal;
+   padding: 10px 30px;
+   margin-top: 1.5rem;
+   border-radius: 3px;
+}
+.chapter-wrapper{
+  display: grid;
+  row-gap: 3px;
+}
+.title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 3px;
+  color: #121212;
+}
+.normal-text{
+  font-size: 0.92rem;
+  font-weight: normal;
+}
+.font-bold{
+  font-weight: 700;
+}
+.dark{
+  color:rgba(0, 0, 0, 0.5) ;
+}
+.darker{
+  color:rgba(0, 0, 0, 0.8) ;
+}
+.blue-text{
+  color: #0290ff;
+}
+.book-buttons{
+  margin-top: 0.8rem;
+}
+.book-buttons button{
+ outline: none;
+ border: none;
+ background-color: transparent;
+ cursor: pointer;
+ color: #0290ff;
+ font-size: 0.92rem;
+  font-weight: normal;
+  margin-right: 20px;
+}

@@ -20,7 +20,7 @@ const Books = () => {
     dispatch(RemoveBookFunc(id));
   };
   return (
-    <>
+    <div className="books-container">
       {StoredBook.map((item) => (
         <Book
           category={item.category}
@@ -32,7 +32,7 @@ const Books = () => {
         />
       ))}
       <AddBook AddNewBook={AddNewBook} />
-    </>
+    </div>
   );
 };
 
