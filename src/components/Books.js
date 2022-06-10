@@ -1,12 +1,16 @@
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AddBook from './AddBook';
 import Book from './Book';
-import { AddBookFunc, RemoveBookFunc } from '../redux/books/books';
+import { AddBookFunc, getBooksFunc, RemoveBookFunc } from '../redux/books/books';
 
 const Books = () => {
   const dispatch = useDispatch();
   const StoredBook = useSelector((state) => state.BooksReducer);
+
+  useEffect(() => {
+    dispatch(getBooksFunc());
+  }, []);
 
   const AddNewBook = (e, NewBook) => {
     e.preventDefault();
