@@ -5,10 +5,13 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOKS = 'GET_BOOKS';
 const books = [];
 
-export const AddBookFunc = (NewBook) => ({
-  type: ADD_BOOK,
-  payload: NewBook,
-});
+export const AddBookFunc = (NewBook) => async (dispatch) => {
+  try {
+    await axios.post(`${process.env.REACT_APP_BASE_URL}`, NewBook);
+    return dispatch({ type: ADD_BOOK, payload: NewBook });
+  } catch (err) { return err; }
+};
+
 export const RemoveBookFunc = (id) => ({
   type: REMOVE_BOOK,
   id,
