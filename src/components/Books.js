@@ -23,6 +23,7 @@ const Books = () => {
     <>
       {StoredBook.map((item) => (
         <Book
+          category={item.category}
           title={item.title}
           key={item.id}
           author={item.author}
