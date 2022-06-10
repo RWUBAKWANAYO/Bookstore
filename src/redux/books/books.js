@@ -1,11 +1,9 @@
+import axios from 'axios';
+
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
-const books = [
-  { id: 1, author: 'Alfredo Covelli', title: 'Vahana Masterclass' },
-  { id: 2, author: 'R. Giridharan', title: 'Right Under Our Nose' },
-  { id: 3, author: 'Ramachandra Guha', title: 'The Commonwealth of Cricket' },
-  { id: 4, author: 'Hunter Biden ', title: 'Beautiful Things’ A Memoir' },
-];
+const GET_BOOKS = 'GET_BOOKS';
+const books = [];
 
 export const AddBookFunc = (NewBook) => ({
   type: ADD_BOOK,
@@ -15,6 +13,12 @@ export const RemoveBookFunc = (id) => ({
   type: REMOVE_BOOK,
   id,
 });
+export const getBooksFunc = () => async (dispatch) => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}`);
+    return dispatch({ type: GET_BOOKS, payload: response.data });
+  } catch (err) { return err; }
+};
 
 const BooksReducer = (state = books, action) => {
   switch (action.type) {
