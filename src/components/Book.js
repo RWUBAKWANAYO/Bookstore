@@ -7,9 +7,9 @@ const Book = ({
 }) => (
   <div className="book-container">
     <div className="book-wrapper">
-      <p className="normal-text dark font-bold">{category}</p>
+      <p className="normal-text darker font-bold">{category}</p>
       <h4 className="title">{title}</h4>
-      <p className="normal-text dark blue-text">{author}</p>
+      <p className="normal-text darker blue-text">{author}</p>
       <div className="book-buttons">
         <button type="button">Comment</button>
         <button type="button" onClick={() => RemoveExistingBook(id)}>Remove</button>

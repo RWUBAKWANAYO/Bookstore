@@ -31,6 +31,7 @@ const Books = () => {
           RemoveExistingBook={RemoveExistingBook}
         />
       ))}
+      <hr className="books-line" />
       <AddBook AddNewBook={AddNewBook} />
     </div>
   );
