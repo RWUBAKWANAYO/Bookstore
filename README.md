@@ -2,7 +2,8 @@
 
 "The Bookstore" is a react web app built to show collections of books, and give users access to add new books or remove existing book
 
-![Screenshot (121)](https://user-images.githubusercontent.com/68381641/171909117-5139133e-3097-4a8b-aa86-b158018e9a06.png)
+![Bookstore CMS](https://user-images.githubusercontent.com/68381641/173251752-7d0ff98d-8693-4353-b8dc-5658a6df8539.png)
+
 
 ## Built With
 - CSS
@@ -12,7 +13,7 @@
 - UUID
 
 ## Live Demo
-[127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html)
+[https://book-store-v2.netlify.app/](https://book-store-v2.netlify.app/)
 ## Getting Started
 To get a local copy open and running follow these simple example steps.
 ### Setup
