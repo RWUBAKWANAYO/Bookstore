@@ -7,9 +7,9 @@ const Categories = () => {
   const UpdateCategoryStatus = () => dispatch(CheckStatusFunc());
   const CategoriesStatus = useSelector((state) => state.CategoriesReducer);
   return (
-    <div>
-      {CategoriesStatus.map((status) => <h1 key={status}>{status}</h1>)}
-      <button type="button" onClick={UpdateCategoryStatus}>Check Status </button>
+    <div className="category-container">
+      {CategoriesStatus.map((status) => <h1 className="title" key={status}>{status}</h1>)}
+      <button type="button" className="update-button" onClick={UpdateCategoryStatus}>Check Status </button>
     </div>
   );
 };
